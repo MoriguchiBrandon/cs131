@@ -1,0 +1,4 @@
+    1  cat cmds.log 
+    2  wget www.github.com
+    3  pwd
+    4  history > cmds.log 
