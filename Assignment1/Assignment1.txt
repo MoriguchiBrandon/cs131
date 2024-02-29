@@ -1,0 +1,34 @@
+1) Command: mkdir Assignment1
+
+2) Output: /bin/bash
+   Command: echo "$SHELL"
+
+2) Output: /mnt/scratch/FA23_CS131_Ashish/brandonsp24
+   Command: echo $HOME
+
+3) uid=1198(brandonsp24)  groups=1198(brandonsp24),77(S77)
+   Command: id
+
+4) From this temp directory, are you allowed to cd in that directory? 	Yes
+   Can you "ls" it? 							Yes
+   Can you "ls -l" it? 							Yes
+   Can you create files under it?					No\
+   Commands:	mkdir myDir
+		chmod 577 myDir/
+
+5) Commands: 	mkdir myDir2
+		mkdir myDir3
+
+6) Commands:	cd myDir2/
+		touch myFile.txt
+ 		mv myFile.txt /mnt/scratch/FA23_CS131_Ashish/brandonsp24/assig1/cs131/Assignment1/myDir3
+
+6) 71367 MiB
+
+9) Identify the operating system version: VERSION="8.6 (Ootpa)"
+   Which file under /etc/ contains this information? os-release
+   Command: cat /etc/os-release
+   
+10)file permissions: lrwxrwxrwx
+   user, groups, and other all have read, write, and execute permissions for os-release
+
