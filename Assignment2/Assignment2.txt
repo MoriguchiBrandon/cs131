@@ -1,0 +1,75 @@
+1a) 	This command will find all files within the etc directory and directories in the etc directory and will output 
+	thoes files into one.txt
+	If there is an error then that error will be output into two.txt
+	The etc directory is in the root directory
+1b)	The content found in one.txt was all of the file paths to every file within the etc directory and directories 
+	within that the user had permission to view
+	The content found in two.txt were all the files within the etc directory that the user did not have permission 
+	to view
+
+2)As per the Dataset, Top 3 [Month, Year] with the most number of YouTube channels created were :
+1. March,2006 with 15 channels  
+2. July,2014 with 13 channels 
+3. August,2014 with 12 channels
+The command(s) used to find it was this:  cut -d "," -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort
+
+cut -d "," -f 20,21 'Global YouTube Statistics.csv' is used to divide the lines of the file into fields with each field being separated by "," and we are selecting the 20th and 21 field to output into the pipe. The 20th field is created    year ,and the 21st is created month
+
+sort function sorts the file numerically and alphebetically
+
+uniq -c function counts each uniq line
+
+3)[brandonsp24@sjsu Assignment2]$ ps Tux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+brandon+ 4091092  0.0  0.0  28672 15168 ?        Ss   02:27   0:03 /usr/lib/systemd/systemd --user
+brandon+ 4091094  0.0  0.0 208640 10944 ?        S    02:27   0:00 (sd-pam)
+brandon+ 4091100  0.0  0.0  49920 13504 ?        R    02:27   0:00 sshd: brandonsp24@pts/29
+brandon+ 4091104  0.0  0.0  20928  8768 pts/29   Ss   02:27   0:00 -bash
+brandon+ 4107430  0.0  0.0  17472  6016 ?        Ss   03:13   0:00 tmux
+brandon+ 4107431  0.0  0.0  19648  6976 pts/31   Ss+  03:13   0:00 -bash
+brandon+ 4112563  0.0  0.0  25344  8000 pts/29   R+   03:27   0:00 ps Tux
+
+4a)vi file.txt
+4b)ps Tux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+brandon+ 4091092  0.0  0.0  28672 15168 ?        Ss   02:27   0:03 /usr/lib/systemd/systemd --user
+brandon+ 4091094  0.0  0.0 208640 10944 ?        S    02:27   0:00 (sd-pam)
+brandon+ 4091100  0.0  0.0  49920 13504 ?        S    02:27   0:00 sshd: brandonsp24@pts/29
+brandon+ 4091104  0.0  0.0  20928  8768 pts/29   Ss   02:27   0:00 -bash
+brandon+ 4107430  0.0  0.0  17472  6016 ?        Ss   03:13   0:00 tmux
+brandon+ 4107431  0.0  0.0  19648  6976 pts/31   Ss+  03:13   0:00 -bash
+brandon+ 4113119  0.0  0.0  49280 10368 ?        S    03:29   0:00 sshd: brandonsp24@pts/32
+brandon+ 4113120  0.0  0.0  19776  6848 pts/32   Ss   03:29   0:00 -bash
+brandon+ 4113199  0.2  0.0  26112 11840 pts/29   S+   03:29   0:00 vim file.txt
+brandon+ 4113526  0.0  0.0  25344  8000 pts/32   R+   03:30   0:00 ps Tux
+
+I notice that the output is very simmilar to the one in q3) with the differences being new processes that accosiate withthe creation of the new terminal, a process for the vim file.txt, and a different PID for the new ps Tux process.
+I also notice the different TTY numbers associated with the processes on different terminals as well as no numbers 
+accociated with some processes including a tmux that I disconnected from and didn't close
+The PID for the vim is : 4113199
+
+4c):q!
+4d)ps Tux
+brandon+ 4091092  0.0  0.0  28672 15168 ?        Ss   02:27   0:03 /usr/lib/systemd/systemd --user
+brandon+ 4091094  0.0  0.0 208640 10944 ?        S    02:27   0:00 (sd-pam)
+brandon+ 4091100  0.0  0.0  49920 13504 ?        S    02:27   0:00 sshd: brandonsp24@pts/29
+brandon+ 4091104  0.0  0.0  20928  8768 pts/29   Ss+  02:27   0:00 -bash
+brandon+ 4107430  0.0  0.0  17472  6016 ?        Ss   03:13   0:00 tmux
+brandon+ 4107431  0.0  0.0  19648  6976 pts/31   Ss+  03:13   0:00 -bash
+brandon+ 4113119  0.0  0.0  49280 10368 ?        S    03:29   0:00 sshd: brandonsp24@pts/32
+brandon+ 4113120  0.0  0.0  19776  7296 pts/32   Ss   03:29   0:00 -bash
+brandon+ 4117626  0.0  0.0  25344  8064 pts/32   R+   03:41   0:00 ps Tux
+
+I notice that there is new PID for the new ps Tux process and there is no vim file.txt process because that process has ended
+I notice that nothing else changed
+
+5)ps Tux
+brandon+ 4091092  0.0  0.0  28672 15168 ?        Ss   02:27   0:03 /usr/lib/systemd/systemd --user
+The process id is 4091092
+
+6)ps aux
+Displays a list of all running processes of all users.
+The processes listed will be expanded to include USER, %CPU, %MEM, VSZ, and RSS.
+The list will also include processes not tied to a terminal and have a ? in the TTY field.
+
+

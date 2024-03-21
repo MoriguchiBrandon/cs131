@@ -1,0 +1,378 @@
+    1  passwd
+    2  pwd
+    3  wget www.github.com
+    4  cds.log
+    5  cmds.log
+    6  history > cmds.log
+    7  man
+    8  ls man
+    9  man ls
+   10  man cd
+   11  ls -lst
+   12  ct man
+   13  cat man
+   14  man cat
+   15  cat index.html 
+   16  ls-lst
+   17  clear
+   18  man ls
+   19  ls -a
+   20  cat cmds
+   21  cat cmds.log 
+   22  head cmds.log 
+   23  head .bash_history 
+   24  head index.html 
+   25  clear
+   26  tail index.html 
+   27  ls -a
+   28  cat .bash_history 
+   29  more man
+   30  m more
+   31  man more
+   32  clear
+   33  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/spotify-2023.csv
+   34  ls lst
+   35  ls -a
+   36  more spotify-2023.csv 
+   37  clear
+   38  less spotify-2023.csv 
+   39  head spotify-2023.csv 
+   40  tail spotify-2023.csv 
+   41  nano spotify-2023.csv 
+   42  cat cmds.log 
+   43  wget www.github.com
+   44  pwd
+   45  history > cmds.log 
+   46  cat cmds.log 
+   47  git init
+   48  ls-a
+   49  ls -a
+   50  cat .git/
+   51  git add cmds.log 
+   52  git status
+   53  git commit -m "First Commit"
+   54  git remote add origin https://github.com/MoriguchiBrandon/cs131.git
+   55  git status
+   56  man git
+   57  git push origin https://github.com/MoriguchiBrandon/cs131.git
+   58  git commit -m "First Commit"
+   59  git config --global user.name Brandon
+   60  git config --global user.email brandon.moriguchi@sjsu.edu
+   61  git commit -m "First Commit"
+   62  git push origin https://github.com/MoriguchiBrandon/cs131.git
+   63  git remote add origin https://github.com/MoriguchiBrandon/cs131.git
+   64  git remote origin https://github.com/MoriguchiBrandon/cs131.git
+   65  git remote https://github.com/MoriguchiBrandon/cs131.git
+   66  git remote add https://github.com/MoriguchiBrandon/cs131.git
+   67  git remote add origins https://github.com/MoriguchiBrandon/cs131.git
+   68  git push -u origin master
+   69  git push origin FuckJustStartCoding2022!
+   70  git push origin https://github.com/MoriguchiBrandon/cs131.git
+   71  clear
+   72  git.status
+   73  git status
+   74  ls -a
+   75  echo "# New-Repository" >> README.md
+   76  git init
+   77  git add README.md
+   78  git add cmds.log 
+   79  git commit -m "first commit"
+   80  git branch -M main
+   81  git remote add origin https://github.com/MoriguchiBrandon/New-Repository.git
+   82  git push -u origin main
+   83  clear
+   84  git remote add local/C:/Users/branm/OneDrive/Documents/GitHub/cs131
+   85  git remote add origin local/C:/Users/branm/OneDrive/Documents/GitHub/cs131
+   86  git remote add local C:/Users/branm/OneDrive/Documents/GitHub/cs131
+   87  git push origin -u origin local
+   88  git push origin C:/Users/branm/OneDrive/Documents/GitHub/cs131
+   89  git init --bare
+   90  git remote add origin /mnt/repo
+   91  git push origin --all
+   92  git config --global user.password FuckJustStartCoding2022!
+   93  clear
+   94  echo "# New-Repository" >> README.md
+   95  git init
+   96  git add README.md
+   97  git add cmds.log 
+   98  git commit -m "first commit"
+   99  git branch -M main
+  100  git remote add origin https://github.com/MoriguchiBrandon/New-Repository.git
+  101  git push -u origin main
+  102  git push origin C:\Users\branm\OneDrive\Documents\GitHub\cs131\Worksheet1
+  103  git commit --amend
+  104  ls -a
+  105  cat cmds.log 
+  106  GITHUB-TOKEN
+  107  cat info/
+  108  git status
+  109  git push origin my-new-branch
+  110  git push origin 'https://github.com/MoriguchiBrandon/cs131.git'
+  111  git push origin https://github.com/MoriguchiBrandon/cs131.git
+  112  ls- a
+  113  ls -a
+  114  git stutus
+  115  git status
+  116  clear
+  117  git add cmds.log 
+  118  git status
+  119  git branch
+  120  git push origin https://github.com/MoriguchiBrandon/cs131.git
+  121  git push origin main
+  122  git pull main origin
+  123  git pull origin main
+  124  git config pull.rebase false
+  125  git pull origin main
+  126  git pull origin main 
+  127  --allow-unrelated-histories
+  128  git pull origin main --allow-unrelated-histories
+  129  ls -a
+  130  git push origin main
+  131  clear
+  132  pwd
+  133  ls -a
+  134  mkdir wkst1
+  135  cd wkst1/
+  136  git clone https://github.com/MoriguchiBrandon/cs131.git
+  137  ls -a
+  138  cd cs131/
+  139  ls -a
+  140  ls -lst
+  141  mkdir clear
+  142  man mv
+  143  mv README.md clear/
+  144  mv config clear/
+  145  mv objects/ clear/
+  146  mv branches/ clear/
+  147  mv description clear/
+  148  mv hooks/ clear/
+  149  mv HEAD clear/
+  150  mv info/ clear/
+  151  mv refs/ clear/
+  152  mv index.html clear/
+  153  mv spotify-2023.csv clear/
+  154  mv index.html.1 clear/
+  155  ls -lst
+  156  cd wkst1/
+  157  ls -lst
+  158  cd cs131/
+  159  ls
+  160  cd Worksheet1/
+  161  ls
+  162  cd .
+  163  cd /.
+  164  pwd
+  165  ls
+  166  cd Worksheet1/
+  167  ls
+  168  cat Readme.md 
+  169  rm Readme.md 
+  170  ls
+  171  cd /..
+  172  ls
+  173  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  174  ls
+  175  ls -a
+  176  ls -lst
+  177  ls
+  178  cd wkst2/
+  179  ls
+  180  head Global\ YouTube\ Statistics.csv 
+  181  ls
+  182  cd wkst2/
+  183  ls
+  184  grep -i 'United States' 'Global YouTube Statistics.csv' 
+  185  head 'Global YouTube Statistics.csv' 
+  186  grep -i music 'Global YouTube Statistics.csv' 
+  187  grep -i music 'Global YouTube Statistics.csv' | wc -l > counts.txt
+  188  cat counts.txt 
+  189  grep -i music 'Global YouTube Statistics.csv' | wc -w >> counts.txt
+  190  cat counts.txt 
+  191  vi counts.txt 
+  192  cat counts.txt 
+  193  history > cmds.log
+  194  cat cmds.log 
+  195  pwd
+  196  git clone https://github.com/MoriguchiBrandon/cs131.git
+  197  ls
+  198  mv cmds.log cs131/
+  199  mv counts.txt cs131/
+  200  cd cs131/
+  201  ls
+  202  mkdir Worksheet2
+  203  mv cmds.log Worksheet2/
+  204  mv counts.txt Worksheet2/
+  205  cd ../
+  206  ls
+  207  cd cs131/
+  208  ls
+  209  pwd
+  210  git init
+  211  git add.
+  212  git add Worksheet2/
+  213  git status 
+  214  git commit -m "Second Commit"
+  215  git remote add origin https://github.com/MoriguchiBrandon/cs131.git
+  216  git push origin main
+  217  ls
+  218  assig1
+  219  mkdir assig1
+  220  cd wkst2/
+  221  ls
+  222  cd cs131/
+  223  ls
+  224  cd ..
+  225  cd assig1/
+  226  git clone https://github.com/MoriguchiBrandon/cs131.git
+  227  cd cs131/
+  228  ls
+  229  mkdir Assignment1
+  230  ls
+  231  touch Assignment1.txt
+  232  ls
+  233  mv Assignment1.txt Assignment1/
+  234  ls
+  235  cd Assignment1/
+  236  ls 
+  237  cat Assignment1.txt 
+  238  ls
+  239  cd assig1/
+  240  ls
+  241  cd cs131/
+  242  ls
+  243  cd Assignment1/
+  244  ls
+  245  echo "$SHELL"
+  246  vi Assignment1.txt 
+  247  echo $HOME
+  248  vi Assignment1.txt 
+  249  cat /etc/passwd
+  250  id
+  251  vi Assignment1.txt 
+  252  pwd
+  253  mkdir myDir
+  254  ls -a
+  255  ls -lst
+  256  chmod 577 myDir/
+  257  ls -lst
+  258  cd myDir/
+  259  ls
+  260  pwd
+  261  ls -l
+  262  ls -i
+  263  touch addFileTest.txt
+  264  cd ..
+  265  vi Assignment1.txt 
+  266  cat Assignment1.txt 
+  267  mydir myDir2
+  268  mkdir myDir2
+  269  mkdir myDir3
+  270  cd myDir2/
+  271  touch myFile.txt
+  272  cd ..
+  273  cd -
+  274  mv myFile.txt /mnt/scratch/FA23_CS131_Ashish/brandonsp24/assig1/cs131/Assignment1/myDir3
+  275  ls
+  276  cd ..
+  277  cd myDir3/
+  278  ls
+  279  cd ..
+  280  vi Assignment1.txt 
+  281  free
+  282  free -h
+  283  man free
+  284  free -m
+  285  man free
+  286  vi Assignment1.txt 
+  287  cat /etc/os-release
+  288  cat /etc/os-release 
+  289  uname -a
+  290  uname -r
+  291  man uname
+  292  uname -o
+  293  vi Assignment1.txt 
+  294  uname --version 
+  295  cat /etc/os-release 
+  296  vi Assignment1.txt 
+  297  cd /..
+  298  ls
+  299  cd etc/
+  300  ls -lst
+  301  cd -
+  302  cd --
+  303  ls
+  304  cd assig1/
+  305  cd cs131/
+  306  cd Assignment1/
+  307  vi Assignment1.txt 
+  308  cat Assignment1.txt 
+  309  history > cdms.log
+  310  tail cdms.log 
+  311  ls -lst
+  312  vi cdms.log 
+  313  cd ..
+  314  git init
+  315  cd cs131/
+  316  git init
+  317  git add Assignment1/
+  318  git status 
+  319  git restore --staged Assignment1/myDir/myFile.txt
+  320  git restore --staged Assignment1//myDir3/myFile.txt
+  321  git status
+  322  git commit -m "Assignment 1 Commit"
+  323  git push -u origin main
+  324  ls
+  325  mkdir assig2
+  326  cd assig1/
+  327  ls
+  328  cd cs131/
+  329  ls
+  330  cd ..
+  331  cs ..
+  332  cd ..
+  333  'ls
+  334  ls
+  335  cd assig2/
+  336  git clone http://github.com/MoriguchiBrandon/cs131.git
+  337  cd cs131/
+  338  ls
+  339  mkdir Assignment2
+  340  cd Assignment
+  341  cd Assignment2/
+  342  touch Assignment2.txt
+1a  343  find /etc -type f > one.txt 2> two.txt
+  344  vi Assignment2.txt 
+1b  345  cat one.txt 
+1b  346  cat two.txt 
+  347  vi Assignment2.txt 
+  348  cd ..
+  349  cd Worksheet2/
+  350  ls
+  351  cd ..
+  352  cd Assignment2/
+  353  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  354  head 'Global YouTube Statistics.csv' 
+  355  ls
+  356  head Assignment2.txt | cut -d "," -f 1
+  357  head 'Global YouTube Statistics.csv' | cut -d "," -f 1
+  358  head 'Global YouTube Statistics.csv' | cut -d "," -f 30,31
+  359  head 'Global YouTube Statistics.csv' | cut -d "," 
+  360  head 'Global YouTube Statistics.csv' | cut -d "," -f 20,21
+  361  head 'Global YouTube Statistics.csv' | cut -d "," -f 20,21 | sort 
+  362  cut -d "," -f 20,21 'Global YouTube Statistics.csv' | sort
+  363   cut -d "," -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c
+2   364  cut -d "," -f 20,21 'Global YouTube Statistics.csv' | sort | uniq -c | sort
+  365  tmux 
+  366  vi Assignment2.txt 
+6   367  ps aux
+  368  ps aux -u brandonsp24
+  369  ps -u brandonsp24
+  370  ps
+  371  ps aux -a
+  372  ps ux
+  373  ps tux
+3,4,5   374  ps Tux
+  375  vi Assignment2.txt 
+4   376  vi file.txt
+  377  vi Assignment2.txt 
+  378  history > cmds.log
