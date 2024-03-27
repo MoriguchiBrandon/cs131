@@ -1,0 +1,4 @@
+  511  cut -d "," -f 2,8,16 'Global YouTube Statistics.csv'| awk -F, '/[Uu]nited [Ss]tates/||/[Uu]nited [Kk]ingdom/||/[Ii]ndia/ { print $3", "$1 ", " $2}'| sort -rn |sort -u -t, -k3 | sort -rn | head -n3 > ws3.txt 
+  517  cut -d "," -f 2,3,5 'Global YouTube Statistics.csv'| awk -F, '/[Ss]ports/||/[Ee]ducation/||/[Ee]ntertainment/ { print $2", "$1 ", " $3}'| sort -rn |sort -u -t, -k3 | sort -rn | head -n 3 >> ws3.txt 
+  518  vi ws3.txt 
+  519  history > cmds.log

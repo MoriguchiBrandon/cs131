@@ -1,0 +1,12 @@
+Task 1: Sort the "highest_monthly_earnings" in order to find the highest monthly earner from 3 different countries: United States, the United Kingdom, and India
+command: cut -d "," -f 2,8,16 'Global YouTube Statistics.csv'| awk -F, '/[Uu]nited [Ss]tates/||/[Uu]nited [Kk]ingdom/||/[Ii]ndia/ { print $3", "$1 ", " $2}'| sort -rn |sort -u -t, -k3 | sort -rn | head -n3 > ws3.txt 
+9200000, DaFuq!?Boom!, United States
+9000000, T-Series, India
+2000000, Woody & Kleiny, United Kingdom
+
+Task 2: Sort the "#Subscribers" in order to find the highest subscribed channel from 3 different categories: Sports, Education, and Entertainment
+command: cut -d "," -f 2,3,5 'Global YouTube Statistics.csv'| awk -F, '/[Ss]ports/||/[Ee]ducation/||/[Ee]ntertainment/ { print $2", "$1 ", " $3}'| sort -rn |sort -u -t, -k3 | sort -rn | head -n 3 >> ws3.txt
+166000000, MrBeast, Entertainment
+162000000, Cocomelon - Nursery Rhymes, Education
+96000000, WWE, Sports
+
