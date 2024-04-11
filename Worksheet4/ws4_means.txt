@@ -1,0 +1,3 @@
+Subscriber Averages
+United States Average:	23416932.90734824281150159744
+India Average:		25658333.33333333333333333333
