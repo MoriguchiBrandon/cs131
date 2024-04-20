@@ -27,8 +27,7 @@ Kudos to these people for putting in the work
 
 Task 3
 	Command used to solve:
-awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F:'($2>=23||$2<=4||$4>=23||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
-
+awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}} {print $1":"$6}' lastsp24.fake | awk -F: '($2>=23||$2<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
 	Output of Command:
 Night Owls List:
 aarushisp24
@@ -39,19 +38,15 @@ albertsp24
 alexsp24
 amansp24
 athishsp24
-atishaysp24
 ayesp24
 billysp24
 brandonsp24
 breannasp24
-connersp24
 daosp24
 davidsp24
 diyasp24
 dylansp24
 edisonsp24
-farihasp24
-fnusp24
 gavinsp24
 georgesp24
 gradysp24
@@ -67,17 +62,13 @@ manassp24
 matthewsp24
 maysp24
 megansp24
-nicholsonsp24
 nicolesp24
-piercesp24
 robertosp24
 ronsp24
 sandrasp24
 sangsp24
 sheelsp24
 sunidhisp24
-swansp24
-taliasp24
 tanishasp24
 tylermsp24
 tylersp24
@@ -86,24 +77,18 @@ xiaokesp24
 xuebosp24
 yelinsp24
 zakisp24
-Night Owls are dope. Please ensure you get enough sleep though.
+Night Owls are dope. Please ensure you get enough sleep though.	
 
 Task 4
 	Commands used to solve:
-awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5&&$2<= 9||$4>=5&&$4<=9){print $1}'| sort -u | awk 'BEGIN{print "Early Birds List:";}END{print "Early Birds are dope. Please ensure you get enough sleep though.";}{print $1}'
-
+awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{print $1":"$6}' lastsp24.fake | awk -F: '($2>=5&&$2<= 9){print $1}'| sort -u | awk 'BEGIN{print "Early Birds List:";}END{print "Early Birds are dope. Please ensure you get enough sleep though.";}{print $1}'
 	Output of Command:
 Early Birds List:
-aarushisp24
 aayushsp24
 ajaysp24
-amansp24
 ericsp24
 gradysp24
-hardiksp24
-robertosp24
 ronsp24
-tanishasp24
 Early Birds are dope. Please ensure you get enough sleep though.
 
 Task 5
