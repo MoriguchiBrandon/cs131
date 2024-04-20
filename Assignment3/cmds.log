@@ -1,0 +1,141 @@
+  692  cd Assignment3/
+  693  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/last.fake
+  694  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/passwd.fake
+  695  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awksp24/ps.fake
+  698  last 5
+  699  last
+  700  head last.fake 
+
+Task 1.1	  701  wc -l last.fake 
+
+  702  wc -l last.fake > Assignment3.txt
+  703  ls
+  704  vi Assignment3.txt 
+
+Task1.2	  705  awk '/sp24/' last.fake > lastsp24.fake
+
+Task1.3	  706  wc -l lastsp24.fake 
+
+  707  grep sp24 last.fake | wc -l
+  708  vi Assignment3.txt 
+  709  vi lastsp24.fake 
+  710  grep Sun lastsp24.fake|awk 'BEGIN{print "The list of people who worked on Sunday are:"} End{print "Kudos to these people for putting in the work"} {print $1} | sort -u
+1
+  711  grep Sun lastsp24.fake 
+  712  grep Sun lastsp24.fake|awk 'BEGIN{print "The list of people who worked on Sunday are:"} End{print "Kudos to these people for putting in the work"} {print $1}
+  713  grep Sun lastsp24.fake|awk 'BEGIN{print "The list of people who worked on Sunday are:"} END{print "Kudos to these people for putting in the work"} {print $1}
+  714  grep Sun lastsp24.fake|awk 'BEGIN{print "The list of people who worked on Sunday are:";} END{print "Kudos to these people for putting in the work";} {print $1;}
+  715* 
+  716* grep Sun lastsp24.fake|awk {print $1;}' | sort -u | awk 'BEGIN{print "The list of people who worked on Sunday are:";} END{print "Kudos to these people for putting in the work";}
+  717* grep Sun lastsp24.fake|awk 'BEGIN{print "The list of people who worked on Sunday are:";} END{print "Kudos to these people for putting in the work";} {print $1;}' | sort -u[B
+  718  grep Sun lastsp24.fake|awk '{print $1;}'| sort -u| awk 'BEGIN{print "The list of people who worked on Sunday are:";} END{print "Kudos to these people for putting in the work";}'
+
+Task 2  	719  grep Sun lastsp24.fake|awk '{print $1;}'| sort -u| awk 'BEGIN{print "The list of people who worked on Sunday are:";} END{print "Kudos to these people for putting in the work";} {print $1}'
+
+  720  vi Assignment3.txt 
+  721  head -2 lastsp24.fake 
+  722  tail -2 lastsp24.fake 
+  723  awk '{print $7}' lastsp24.fake 
+  724  awk '{print $7 " " print $8}' lastsp24.fake | tail
+  725  awk '{print $7 " " $8}' lastsp24.fake | tail
+  726  awk '{print $7 " " $8}' lastsp24.fake | head
+  727  awk '{print $7 " " $8 " " $9}' lastsp24.fake | tail
+  728  awk '{print $7 " " $8 " " $9}' lastsp24.fake | head
+  729  vi lastsp24.fake 
+  730  vi last.fake 
+  731  awk '{print $6" "$7 " " $8 " " $9}' lastsp24.fake | head
+  732  awk '{print $6" "$7 " " $8}' lastsp24.fake | head
+  733  awk '{if ($6~/^[0-9]$/) {$6 = $7}} {print $6}'
+  734  awk -F '{if ($6~/^[0-9]$/) {$6 = $7}} {print $6}'
+  735* [A
+  736  awk '{if ($6~/^[0-9]$/) {$6 = $7}} {print $6}' lastsp24.fake 
+  737  awk '{if ($6~/^[0-9]$/) {$6 = $7}} {print $6}' lastsp24.fake | head
+  738  awk '{if ($6~/^[0-9]$/) {$6 = $7}} {print $6}' lastsp24.fake | tail
+  739  tail lastsp24.fake 
+  740* 
+  741  awk '{print $6" "$7 " " $8 " " $9}' lastsp24.fake | tail
+  742  awk '{print $6" "$7 " " $8 " " $9}' lastsp24.fake | head
+  743  awk '{if ($6~/^[0-9][ 0-9]$/) {$6 = $7}}{if ($8~/^"still"$/){$8=$7}} {print $6" "$8}' lastsp24.fake | tail
+  744  awk '{if ($6~/^[0-9][ 0-9]$/) {$6 = $7}}{if ($8~/^"still"$/){$8=$7}} {print $6" "$8}' lastsp24.fake | head
+  745  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/"still"/){$8=$7}} {print $6" "$8}' lastsp24.fake | head
+  746  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/^[s]$/){$8 = $7}} {print $6" "$8}' lastsp24.fake | head
+  747  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}} {print $6" "$8}' lastsp24.fake | head
+  748  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$){$8 = $9}} {print $6" "$8}' lastsp24.fake | head
+  749  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | head
+  750  awk '{if ($6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | tail
+  751  awk '{if ($6~/^[ 0-9][0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | tail
+  752  awk '{if ($6~/^[ 0-9][0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | head
+  753  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | head
+  754  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $6" "$8}' lastsp24.fake | tail
+  755  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1" "$6" "$8}' lastsp24.fake | tail
+  756  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1" "$6" "$8}' lastsp24.fake | awk '{if($2>=22:00 || $2<= 04:00){print $1 " "$2" "$3}|tail
+  757  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1" "$6" "$8}' lastsp24.fake | awk '{if($2>=22:00 || $2<= 04:00){print $1 " "$2" "$3}'|tail
+  758  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '{if($2>=22 || $2<= 04){print $1 " "$2":"$3" "$4":"$5}'|tail
+  759  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '{if($2>=22 || $2<= 04){print $1 " "$2":"$3" "$4":"$5}}'|tail
+  760  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04){print $1 " "$2":"$3" "$4":"$5}'|tail
+  761  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04)($4>=22||$4<=4){print $1 " "$2":"$3" "$4":"$5}'|tail
+  762  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1 " "$2":"$3" "$4":"$5}'|tail
+  763  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1 " "$2":"$3" "$4":"$5}'
+  764  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1 " "$2":"$3" "$4":"$5}'| sort -u
+  765  vi Assignment3.txt 
+  766  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1}'| sort -u
+  767  vi Assignment3.txt 
+  768  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:}END{print "Night Owls are dope. Please ensure you get enough sleep though."}{print $1}]'
+  769  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:"}END{print "Night Owls are dope. Please ensure you get enough sleep though."}{print $1}]'
+  770  vi Assignment3.txt 
+  771  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}]'
+  772  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22 || $2<= 04||$4>=22||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
+  773  vi Assignment3.txt 
+  774  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5 || $2<= 9||$4>=5||$4<=9){print $1}'| sort -u | awk 'BEGIN{print "Early Birds List:";}END{print "Early Birds are dope. Please ensure you get enough sleep though.";}{print $1}'
+  775  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5 || $2<= 9||$4>=5||$4<=9){print $1" "$2":"$3" "$4":"$5}'
+  776  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5&&$2<= 9||$4>=5&&$4<=9){print $1" "$2":"$3" "$4":"$5}'
+  777  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5&&$2<= 9||$4>=5&&$4<=9){print $1}'{print $1}'| sort -u | awk 'BEGIN{print "Early Birds List:";}END{print "Early Birds are dope. Please ensure you get enough sleep though.";}{print $1}'
+
+
+Task 4	  778  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=5&&$2<= 9||$4>=5&&$4<=9){print $1}'| sort -u | awk 'BEGIN{print "Early Birds List:";}END{print "Early Birds are dope. Please ensure you get enough sleep though.";}{print $1}'
+
+
+  779  vi Assignment3.txt 
+  780  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22&&$2<= 04||$4>=22&&$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
+  781  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22&&$2<=4||$4>=22&&$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
+  782  vi lastsp24.fake 
+  783  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22||$2<=4||$4>=22||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
+  784  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=22||$2<=4||$4>=22||$4<=4){print $1" "$2":"$3" "$4":"$5}'
+  785  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=23||$2<=4||$4>=23||$4<=4){print $1" "$2":"$3" "$4":"$5}'
+
+
+Task 3	  786  awk '{if ($6~/^[0-9][0-9]$/ || $6~/^[0-9]$/) {$6 = $7}}{if ($8~/^still$/){$8 = $7}}{if($8~/^[-]$/){$8 = $9}} {print $1":"$6":"$8}' lastsp24.fake | awk -F: '($2>=23||$2<=4||$4>=23||$4<=4){print $1}'| sort -u | awk 'BEGIN{print "Night Owls List:";}END{print "Night Owls are dope. Please ensure you get enough sleep though.";}{print $1}'
+
+
+  787  vi Assignment3.txt 
+  788  awk '/^[tT]/ {print $1}' lastsp24.fake 
+
+Task 5	  789  awk '/^[tT]/ {print $1}' lastsp24.fake | sort -u
+
+  790  vi Assignment3.txt 
+  791  head passwd.fake 
+  792  awk '(/^[aA]/)' passwd.fake 
+  793  awk -F: '($1~/^[aA]/)&&($3%2==0)' passwd.fake 
+
+Task 6	  794  awk -F: '($1~/^[aA]/)&&($3%2==0){print $1}' passwd.fake 
+
+  795  vi Assignment3.txt 
+  796  sed 's/[A-z0-9 ]//g' Assignment3.txt | head
+  797  sed 's/[A-z0-9]//g' Assignment3.txt | head
+  798  sed 's/[A-z]//g' Assignment3.txt | head
+  799  sed 's/[a-zA-z0-9/ ]//g' Assignment3.txt | head
+  800  sed 's/[a-zA-z0-9]//g' Assignment3.txt | head
+  801  sed 's/[a-zA-z]//g' Assignment3.txt | head
+  802  sed 's/[a-z]//g' Assignment3.txt | head
+  803  sed 's/[a-z]//g' passwd.fake| head
+  804  sed 's/[a-z][ ][0-9]//g' passwd.fake| head
+  805  sed 's/[a-z]//g' passwd.fake| head
+  806  sed 's/[a-z0-9]//g' passwd.fake| head
+  807  sed 's/[a-z0-9A-Z]//g' passwd.fake| head
+  808  sed 's/[a-z0-9A-Z ]//g' passwd.fake| head
+  809  sed 's/[a-z0-9A-Z/ ]//g' passwd.fake| head
+
+Task 7	  810  sed 's/[a-z0-9A-Z ]//g' passwd.fake| sort -u
+
+  811  vi Assignment3.txt 
+  812  history > cmds.log
