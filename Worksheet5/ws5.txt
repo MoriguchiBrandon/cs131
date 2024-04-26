@@ -1,0 +1,4 @@
+146 lines in United States/Music.txt
+136 lines in United States/Entertainment.txt
+52 lines in United States/Gaming.txt
+44 lines in United States/Comedy.txt

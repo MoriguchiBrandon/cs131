@@ -1,0 +1,121 @@
+  905  cd cs131/
+  906  ls
+  907  mkdir Worksheet5
+  908  cd Worksheet5/
+  909  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+  910  ls
+  911  mkdir United_States
+  912  touch script.sh
+  913  ls -ltr
+  914  chmod u+x script.sh 
+  915  ls -ltr
+  916  vi script.sh 
+  917  ./bash script.sh 
+  918  ./script.sh 
+  919  vi script.sh 
+  920  ./script.sh 
+  921  vi script.sh 
+  922  ./script.sh 
+  923  tail 'Global YouTube Statistics.csv' 
+  924  vi script.sh 
+  925  ./script.sh 
+  926  vi script.sh 
+  927  ./script.sh 
+  928  vi script.sh 
+  929  ./script.sh 
+  930  vi script.sh 
+  931  ./script.sh 
+  932  vi script.sh 
+  933  ./script.sh 
+  934  vi script.sh 
+  935  ./script.sh 
+  936  vi script.sh 
+  937  ./script.sh 
+  938  tail 'Global YouTube Statistics.csv' 
+  939  vi script.sh 
+  940  grep United States 'Global YouTube Statistics.csv' 
+  941  grep 'United States' 'Global YouTube Statistics.csv' 
+  942  vi script.sh 
+  943  ./script.sh 
+  944  vi script.sh 
+  945  ./script.sh 
+  946  vi script.sh 
+  947  ./script.sh 
+  948  vi script.sh 
+  949  head 'Global YouTube Statistics.csv' 
+  950  vi script.sh 
+  951  ./script.sh 
+  952  vi script.sh 
+  953  ./script.sh 
+  954  vi script.sh 
+  955  ./script.sh 
+  956  vi script.sh 
+  957  ./script.sh 
+  958  vi script.sh 
+  959  ./script.sh 
+  960  vi script.sh 
+  961  ./script.sh 
+  962  vi script.sh 
+  963  ./script.sh 
+  964  vi script.sh 
+  965  ./script.sh 
+  966  vi script.sh 
+  967  ./script.sh 
+  968  vi script.sh 
+  969  ./script.sh 
+  970  tail 'Global YouTube Statistics.csv' 
+  971  vi script.sh 
+  972  ./script.sh 
+  973  vi script.sh 
+  974  ./script.sh 
+  975  vi script.sh 
+  976  ./script.sh 
+  977  vi script.sh 
+  978  ./script.sh 
+  979  ls
+  980  cd United_States/
+  981  ls
+  982  cd ..
+  983  rm United
+  984  vi script.sh 
+  985  ./script.sh 
+  986  ls
+  987  cd United_States/
+  988  ls
+  989  wc Comedy.txt 
+  990  cd ..
+  991  grep "United States" 'Global YouTube Statistics.csv' | grep "Comedy" | wc
+  992  cd United_States/
+  993  vi Comedy.txt 
+  994  cd ..
+  995  ls
+  996  rmdir -f United_States/
+  997* 
+  998  grep "United States" 'Global YouTube Statistics.csv' | grep "Comedy"
+  999  ls
+ 1000  cd United_States/
+ 1001  ls
+ 1002  rm Comedy.txt 
+ 1003  em Entertainment.txt 
+ 1004  rm Gaming.txt 
+ 1005  rm Music.txt 
+ 1006  cd ..
+ 1007  rmdir United_States/
+ 1008  cd United_States/
+ 1009  ls -ltr
+ 1010  rm Entertainment.txt 
+ 1011  cd ..
+ 1012  rmdir United_States/
+ 1013  vi script.sh 
+ 1014  ./script.sh 
+ 1015  ls
+ 1016  mkdir United\ States
+ 1017  ls
+
+
+This is the script that worked 
+ 1018  ./script.sh 
+
+
+ 1019  vi ws5.txt
+ 1020  history>cmds.log
